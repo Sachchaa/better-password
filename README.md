@@ -91,3 +91,7 @@ The library throws errors in the following cases:
 ## License
 
 MIT
+
+##
+
+Special thanks to [Wei Zhu](https://www.github.com/yesmeck)
