@@ -1,0 +1,56 @@
+{
+  "name": "@better-password/better-password",
+  "version": "1.0.1",
+  "packageManager": "pnpm@10.11.0",
+  "description": "A secure and customizable password generation package",
+  "type": "module",
+  "keywords": [
+    "generate",
+    "password",
+    "generator",
+    "security",
+    "random",
+    "pin"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/sachchaa/better-password#readme",
+  "bugs": {
+    "url": "https://github.com/sachchaa/better-password/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sachchaa/better-password.git"
+  },
+  "author": "Sachin Kanishka",
+  "files": [
+    "README.md",
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js",
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "release": "bumpp && pnpm publish",
+    "prepublishOnly": "pnpm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.17",
+    "bumpp": "^10.1.0",
+    "happy-dom": "^17.4.7",
+    "tsdown": "^0.11.9",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.3"
+  }
+}
