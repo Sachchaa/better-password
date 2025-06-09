@@ -1,6 +1,6 @@
 {
   "name": "@better-password/better-password",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "packageManager": "pnpm@10.11.0",
   "description": "A secure and customizable password generation package",
   "type": "module",
@@ -10,7 +10,8 @@
     "generator",
     "security",
     "random",
-    "pin"
+    "pin",
+    "react"
   ],
   "license": "MIT",
   "homepage": "https://github.com/sachchaa/better-password#readme",

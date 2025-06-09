@@ -1,12 +1,12 @@
 # Better Password Generator
 
-A secure and flexible password and PIN generation library for Node.js.
+A secure and flexible password and PIN generation library for both Node.js and browser environments.
 
 ## Features
 
 - Generate secure random passwords with customizable options
 - Generate random PINs with configurable length
-- Cryptographically secure using Node.js crypto module
+- Works in both Node.js and browser environments
 - ES Module support
 
 ## Installation
@@ -24,7 +24,7 @@ yarn add @better-password/better-password
 ### Password Generation
 
 ```javascript
-import { generatePassword } from '@better-password/better-password';
+import { generatePassword } from "@better-password/better-password";
 
 // Generate a default password (16 characters, includes lowercase, uppercase, and numbers)
 const password = generatePassword();
@@ -32,11 +32,11 @@ console.log(password); // Example: "k02AX1kPprCDc1VNfvmt"
 
 // Generate a password with custom options
 const customPassword = generatePassword({
-  length: 20, // Length of the password
-  lowercase: true, // Include lowercase letters
-  uppercase: true, // Include uppercase letters
-  numbers: true, // Include numbers
-  symbols: true, // Include special characters
+  length: 20,
+  lowercase: true,
+  uppercase: true,
+  numbers: true,
+  symbols: true,
 });
 console.log(customPassword); // Example: "Kj#9mP$2vN@5xL&8qR*"
 ```
@@ -56,7 +56,7 @@ Special characters: `!@#$%^&*()_+-=[]{}|;:,.<>?`
 ### PIN Generation
 
 ```javascript
-import { generatePIN } from '@better-password/better-password';
+import { generatePIN } from "@better-password/better-password";
 
 // Generate a default PIN (4 digits)
 const pin = generatePIN();
@@ -75,7 +75,7 @@ console.log(customPin); // Example: "803593"
 
 ## Security
 
-- Uses Node.js built-in `crypto` module for secure random number generation
+- Compatible with all modern browsers and Node.js environments
 - Ensures at least one character from each enabled character set in passwords
 - Shuffles password characters to ensure random distribution
 
